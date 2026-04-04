@@ -305,6 +305,70 @@
 </div>
 </section>
 
+<!-- ── SECURITY ── -->
+<section id="security" style="border-top:1px solid var(--border);padding:7rem 1.5rem;">
+<div class="section-inner">
+    <div class="reveal">
+    <div class="glass section-badge">Security</div>
+    <h2 class="section-heading">Nice try.</h2>
+    <p class="section-sub">Dangerous commands are blocked at the gateway with a filter layer before anything hits Docker. You can explore — you just can't break anything.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem;" class="reveal reveal-d1">
+    <div class="glass blocked-demo">
+        <div class="blocked-bar">
+        <div class="t-btn t-close"></div>
+        <div class="t-btn t-min"></div>
+        <div class="t-btn t-max"></div>
+        <span class="terminal-title">blocked command</span>
+        </div>
+        <div class="blocked-body">
+        <div><span class="t-prompt">$</span> <span class="t-err">rm -rf /</span></div>
+        <div style="margin:0.5rem 0;"></div>
+        <div class="cmd-blocked">[!] Command blocked by system policy</div>
+        <div class="t-warn">Nice try — this environment is sandboxed.</div>
+        <div class="t-out" style="margin-top:0.5rem;">(╯°□°)╯︵ ┻━┻</div>
+        </div>
+    </div>
+
+    <div class="glass blocked-demo">
+        <div class="blocked-bar">
+        <div class="t-btn t-close"></div>
+        <div class="t-btn t-min"></div>
+        <div class="t-btn t-max"></div>
+        <span class="terminal-title">restricted install</span>
+        </div>
+        <div class="blocked-body">
+        <div><span class="t-prompt">$</span> <span class="t-warn">sudo apt install vlc</span></div>
+        <div style="margin:0.5rem 0;"></div>
+        <div class="cmd-blocked">[!] Restricted environment</div>
+        <div class="cmd-info">Only browser-related packages allowed.</div>
+        <div class="cmd-info">Try: firefox  |  brave-browser</div>
+        <div class="t-out" style="margin-top:0.5rem;">(¬_¬)</div>
+        </div>
+    </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;" class="reveal reveal-d2">
+    <div class="glass" style="border-radius:12px;padding:1.25rem;">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Layer 1</div>
+        <div style="font-size:0.85rem;color:#fff;">Command Filtering</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.3rem;">Block dangerous ops at the gateway</div>
+    </div>
+    <div class="glass" style="border-radius:12px;padding:1.25rem;">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Layer 2</div>
+        <div style="font-size:0.85rem;color:#fff;">Docker Isolation</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.3rem;">Each user gets their own container</div>
+    </div>
+    <div class="glass" style="border-radius:12px;padding:1.25rem;">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Layer 3</div>
+        <div style="font-size:0.85rem;color:#fff;">Resource Limits</div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.3rem;">CPU, memory, disk — all capped</div>
+    </div>
+    </div>
+</div>
+</section>
+
 
 </body>
 </html>
