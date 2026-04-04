@@ -543,3 +543,26 @@ section { padding: 7rem 1.5rem; }
     color: rgba(255,255,255,0.2);
     font-size: 0.7rem;
 }
+
+/* ── SECURITY ── */
+.blocked-demo {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+.blocked-bar {
+    background: rgba(255,255,255,0.04);
+    padding: 0.75rem 1rem;
+    display: flex; align-items: center; gap: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.blocked-body {
+    background: rgba(0,0,0,0.7);
+    padding: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 2;
+}
+.cmd-blocked { color: #f87171; }
+.cmd-safe { color: var(--accent); }
+.cmd-info { color: rgba(255,255,255,0.4); }
