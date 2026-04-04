@@ -262,5 +262,49 @@
 </div>
 </section>
 
+<!-- ── ARCHITECTURE ── -->
+<section class="arch-section" id="arch">
+<div class="section-inner" style="max-width:700px;">
+    <div class="reveal" style="text-align:center;">
+    <div class="glass section-badge">System Architecture</div>
+    <h2 class="section-heading">How it's wired.</h2>
+    <p class="section-sub" style="max-width:400px;margin:0 auto 3.5rem;">Every layer has a job. Every request is filtered. Every container is isolated. This is the full command flow from your browser to the Linux kernel.</p>
+    </div>
+
+    <div class="arch-flow">
+    <div class="glass-strong arch-node reveal">
+        <span>Your Browser</span>
+        <span class="arch-node-label">xterm.js UI</span>
+    </div>
+    <div class="arch-arrow reveal">↓</div>
+    <div class="glass arch-node reveal reveal-d1">
+        <span>Cloudflare</span>
+        <span class="arch-node-label">Security + CDN</span>
+    </div>
+    <div class="arch-arrow reveal reveal-d1">↓</div>
+    <div class="glass arch-node reveal reveal-d2">
+        <span>Vercel</span>
+        <span class="arch-node-label">Frontend host</span>
+    </div>
+    <div class="arch-arrow reveal reveal-d2">↓</div>
+    <div class="glass arch-node reveal reveal-d3">
+        <span>WebSocket</span>
+        <span class="arch-node-label">Real-time channel</span>
+    </div>
+    <div class="arch-arrow reveal reveal-d3">↓</div>
+    <div class="glass arch-node reveal reveal-d4">
+        <span>Railway (Node.js)</span>
+        <span class="arch-node-label">Command filter + router</span>
+    </div>
+    <div class="arch-arrow reveal reveal-d4">↓</div>
+    <div class="glass-strong arch-node reveal reveal-d5" style="border-color:rgba(74,222,128,0.2);">
+        <span style="color:var(--accent);">Docker Container</span>
+        <span class="arch-node-label">Linux Kernel Execution</span>
+    </div>
+    </div>
+</div>
+</section>
+
+
 </body>
 </html>
