@@ -302,3 +302,105 @@ nav {
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
+
+/* ── SECTION COMMON ── */
+section { padding: 7rem 1.5rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-badge {
+    display: inline-block;
+    border-radius: 9999px;
+    padding: 0.3rem 1rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+.section-heading {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.section-sub {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 480px;
+}
+
+/* ── OS SELECTION ── */
+.os-section {
+    border-top: 1px solid var(--border);
+}
+.os-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.os-card {
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.os-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,0.6); }
+.os-card.available { cursor: none; }
+.os-card.locked { opacity: 0.5; cursor: not-allowed; }
+.os-card-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+}
+.os-card-icon svg { width: 22px; height: 22px; }
+.os-name {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1;
+}
+.os-desc {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+}
+.os-status {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.68rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    margin-top: auto;
+    align-self: flex-start;
+}
+.os-status.available {
+    background: rgba(74,222,128,0.12);
+    color: #4ade80;
+    border: 1px solid rgba(74,222,128,0.25);
+}
+.os-status.soon {
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.os-status-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+}
+.os-status.available .os-status-dot { animation: pulse 2s infinite; }
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
