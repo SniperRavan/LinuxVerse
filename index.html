@@ -209,7 +209,58 @@
 </div>
 </section>
 
+<!-- ── TERMINAL PREVIEW ── -->
+<section class="terminal-section" id="terminal">
+<div class="section-inner">
+    <div class="terminal-layout">
+    <div class="reveal">
+        <div class="glass section-badge">Live Terminal</div>
+        <h2 class="section-heading">Type a command.<br/>Get a result.</h2>
+        <p class="section-sub" style="margin-bottom:1.75rem;">xterm.js frontend. Docker backend. WebSocket in between. Commands hit a real Linux kernel and the output streams back instantly.</p>
+        <div style="display:flex;flex-direction:column;gap:0.6rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></div>
+            <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">Real Docker execution — not simulation</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></div>
+            <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">WebSocket streaming for instant output</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></div>
+            <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">Command filter blocks dangerous operations</span>
+        </div>
+        </div>
+    </div>
 
+    <div class="glass terminal-window reveal reveal-d2">
+        <div class="terminal-bar">
+        <div class="t-btn t-close"></div>
+        <div class="t-btn t-min"></div>
+        <div class="t-btn t-max"></div>
+        <span class="terminal-title">sniper@linuxverse:~$</span>
+        </div>
+        <div class="terminal-body">
+        <div><span class="t-prompt">sniper@linuxverse</span><span class="t-cmd">:~$ </span><span class="t-cmd">uname -a</span></div>
+        <div class="t-out">Linux linuxverse 6.5.0-ubuntu #1 SMP x86_64 GNU/Linux</div>
+        <div style="margin-top:0.25rem;"></div>
+        <div><span class="t-prompt">sniper@linuxverse</span><span class="t-cmd">:~$ </span><span class="t-cmd">ls -la</span></div>
+        <div class="t-out">total 28</div>
+        <div class="t-out">drwxr-xr-x  4 sniper sniper 4096 Apr  5 10:22 .</div>
+        <div class="t-out">drwxr-xr-x 18 root   root   4096 Apr  5 10:21 ..</div>
+        <div class="t-out">-rw-r--r--  1 sniper sniper  220 Apr  5 10:21 .bash_profile</div>
+        <div class="t-out">drwxr-xr-x  2 sniper sniper 4096 Apr  5 10:22 Documents</div>
+        <div style="margin-top:0.25rem;"></div>
+        <div><span class="t-prompt">sniper@linuxverse</span><span class="t-cmd">:~$ </span><span class="t-cmd">sudo apt install firefox</span></div>
+        <div class="t-out">Reading package lists... Done</div>
+        <div class="cmd-safe">Installing firefox... OK</div>
+        <div style="margin-top:0.25rem;"></div>
+        <div><span class="t-prompt">sniper@linuxverse</span><span class="t-cmd">:~$ </span><span class="t-blink"></span></div>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
 
 </body>
 </html>
